@@ -20,6 +20,7 @@
 		1865F3F71D503BB900BC56F5 /* FirstViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865F3F61D503BB900BC56F5 /* FirstViewControllerVM.m */; };
 		1865F3FA1D503C1E00BC56F5 /* MVVMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865F3F91D503C1E00BC56F5 /* MVVMBaseViewController.m */; };
 		1865F3FD1D503C4000BC56F5 /* MVVMBaseViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865F3FC1D503C4000BC56F5 /* MVVMBaseViewControllerVM.m */; };
+		1865F4041D504E6100BC56F5 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865F4031D504E6100BC56F5 /* Doctor.m */; };
 		69E3CE5BA935685078CD9D0A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE4DFC685DEAFB04D0BB17F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,8 @@
 		1865F3F91D503C1E00BC56F5 /* MVVMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVVMBaseViewController.m; sourceTree = "<group>"; };
 		1865F3FB1D503C4000BC56F5 /* MVVMBaseViewControllerVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVVMBaseViewControllerVM.h; sourceTree = "<group>"; };
 		1865F3FC1D503C4000BC56F5 /* MVVMBaseViewControllerVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVVMBaseViewControllerVM.m; sourceTree = "<group>"; };
+		1865F4021D504E6100BC56F5 /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
+		1865F4031D504E6100BC56F5 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
 		1D08D8595CE979EB8F5F9097 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		4BE4DFC685DEAFB04D0BB17F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B78F50FE15AD070CA940822 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -201,13 +204,39 @@
 		1865F3EF1D503B2D00BC56F5 /* FirstViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1865F4001D504D7000BC56F5 /* M */,
+				1865F3FF1D504D5800BC56F5 /* VM */,
+				1865F3FE1D504D3000BC56F5 /* V/VC */,
+			);
+			name = FirstViewController;
+			sourceTree = "<group>";
+		};
+		1865F3FE1D504D3000BC56F5 /* V/VC */ = {
+			isa = PBXGroup;
+			children = (
 				1865F3F01D503B7200BC56F5 /* FirstViewController.h */,
 				1865F3F11D503B7200BC56F5 /* FirstViewController.m */,
 				1865F3F21D503B7200BC56F5 /* FirstViewController.xib */,
+			);
+			name = V/VC;
+			sourceTree = "<group>";
+		};
+		1865F3FF1D504D5800BC56F5 /* VM */ = {
+			isa = PBXGroup;
+			children = (
 				1865F3F51D503BB900BC56F5 /* FirstViewControllerVM.h */,
 				1865F3F61D503BB900BC56F5 /* FirstViewControllerVM.m */,
 			);
-			name = FirstViewController;
+			name = VM;
+			sourceTree = "<group>";
+		};
+		1865F4001D504D7000BC56F5 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				1865F4021D504E6100BC56F5 /* Doctor.h */,
+				1865F4031D504E6100BC56F5 /* Doctor.m */,
+			);
+			name = M;
 			sourceTree = "<group>";
 		};
 		A1833D6EA1D434A81A089944 /* Pods */ = {
@@ -415,6 +444,7 @@
 				1865F3B71D5032DB00BC56F5 /* AppDelegate.m in Sources */,
 				1865F3F71D503BB900BC56F5 /* FirstViewControllerVM.m in Sources */,
 				1865F3B41D5032DB00BC56F5 /* main.m in Sources */,
+				1865F4041D504E6100BC56F5 /* Doctor.m in Sources */,
 				1865F3FA1D503C1E00BC56F5 /* MVVMBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +588,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MVVMTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eku001.MVVMTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -570,6 +601,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MVVMTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eku001.MVVMTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -8,6 +8,32 @@
 
 #import "MVVMBaseViewControllerVM.h"
 
+
+@interface MVVMBaseViewControllerVM ()
+
+@end
+
 @implementation MVVMBaseViewControllerVM
+
+- (instancetype)initWithViewController:(UIViewController *)vc {
+    self = [super init];
+    if (self) {
+        self.targetVC = vc;
+        
+        [self initialBind];
+    }
+    return self;
+}
+
+- (void)setTargetVC:(UIViewController *)targetVC {
+    _targetVC = targetVC;
+}
+
+- (UIViewController *)targetVC {
+    return _targetVC;
+}
+
+- (void)initialBind {
+}
 
 @end

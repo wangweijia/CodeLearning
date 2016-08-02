@@ -9,11 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "MVVMBaseViewControllerVM.h"
 
-@interface MVVMBaseViewController : UIViewController
+@interface MVVMBaseViewController : UIViewController {
+    MVVMBaseViewControllerVM *_baseVM;
+}
 
 /**
  *  strong vm
  */
-@property (nonatomic, strong) MVVMBaseViewControllerVM *baseVM;
+//@property (nonatomic, strong) MVVMBaseViewControllerVM *baseVM;
+
+- (MVVMBaseViewControllerVM *)baseVM;
+
+- (void)setBaseVM:(MVVMBaseViewControllerVM *)baseVM;
 
 @end

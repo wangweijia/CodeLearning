@@ -7,8 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "MVVMBaseViewControllerVM.h"
+#import "Doctor.h"
 
-@interface FirstViewControllerVM : MVVMBaseViewControllerVM
+@interface FirstViewControllerVM : MVVMBaseViewControllerVM <UITableViewDataSource>
+
+/**
+ *  请求医生
+ */
+@property (nonatomic, strong, readonly) RACCommand *requestDoctors;
 
 @end

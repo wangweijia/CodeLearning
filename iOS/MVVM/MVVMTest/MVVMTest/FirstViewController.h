@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MVVMBaseViewController.h"
+#import "FirstViewControllerVM.h"
 
 @interface FirstViewController : MVVMBaseViewController
 

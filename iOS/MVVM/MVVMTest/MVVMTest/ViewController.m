@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "FirstViewController.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton *firstButton;
 
 @end
 
@@ -16,7 +20,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    [[_firstButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        FirstViewController *firstViewController = [[FirstViewController alloc] init];
+                
+        [self.navigationController pushViewController:firstViewController animated:YES];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

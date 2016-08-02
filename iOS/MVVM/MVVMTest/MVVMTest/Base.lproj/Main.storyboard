@@ -16,9 +16,34 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNp-8h-bgM">
+                                <rect key="frame" x="235" y="154" width="131" height="30"/>
+                                <state key="normal" title="FirstViewController"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8O-Bd-R0b">
+                                <rect key="frame" x="277" y="204" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpF-gW-oLc">
+                                <rect key="frame" x="277" y="254" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RpF-gW-oLc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BTD-wF-lGc"/>
+                            <constraint firstItem="HNp-8h-bgM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bbh-g5-rKT"/>
+                            <constraint firstItem="o8O-Bd-R0b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sgp-Gg-8fy"/>
+                            <constraint firstItem="o8O-Bd-R0b" firstAttribute="top" secondItem="HNp-8h-bgM" secondAttribute="bottom" constant="20" id="Ugm-5m-y5D"/>
+                            <constraint firstItem="RpF-gW-oLc" firstAttribute="top" secondItem="o8O-Bd-R0b" secondAttribute="bottom" constant="20" id="X5x-nh-dkC"/>
+                            <constraint firstItem="HNp-8h-bgM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="90" id="k3n-MV-l1f"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oVA-RI-jFl"/>
+                    <connections>
+                        <outlet property="firstButton" destination="HNp-8h-bgM" id="hDQ-Je-3vb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
