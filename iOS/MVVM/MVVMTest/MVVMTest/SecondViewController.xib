@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A254g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A270f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,6 +7,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController">
             <connections>
+                <outlet property="bottomViewConstraintBottom" destination="RSD-Qh-myN" id="mo0-pk-bnL"/>
+                <outlet property="cityLabel" destination="LM7-FJ-FfZ" id="BnU-yg-A90"/>
+                <outlet property="faceToFaceButton" destination="ok5-OW-bbe" id="O3C-QI-fEm"/>
+                <outlet property="hospitalLabel" destination="17G-iA-JsP" id="5Tc-Ch-4vF"/>
+                <outlet property="myTableView" destination="y7e-rX-Yic" id="6Vz-fD-l3s"/>
+                <outlet property="nameLabel" destination="Ugn-oD-jlq" id="xNm-Xb-lFP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -29,11 +29,13 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+#warning - 绑定baseVM 可以统一VM的命名规则，让后把绑定事件 放到 积累的初始化方法中
         self.baseVM = [[FirstViewControllerVM alloc] initWithViewController:self];
     }
     return self;
 }
 
+#warning - 这方法优化，使用父类的 属性名，返回正确的数据类型
 - (FirstViewControllerVM *)firstViewControllerVM {
     return ((FirstViewControllerVM *)_baseVM);
 }
@@ -44,7 +46,7 @@
     _myTableView.dataSource = self.firstViewControllerVM;
     _myTableView.delegate = self;
     
-    if (!_preposeRequset) {
+    if (!self.preposeRequset) {
         [self requsetDoctor];
     }
     
@@ -55,9 +57,7 @@
  *  请求医生数据
  */
 - (void)requsetDoctor {
-    @weakify(self)
     [[[self firstViewControllerVM].requestDoctors execute:nil] subscribeNext:^(id x) {
-        @strongify(self)
         [self.myTableView reloadData];
     }];
 }

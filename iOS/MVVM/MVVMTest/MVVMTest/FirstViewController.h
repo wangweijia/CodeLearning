@@ -12,11 +12,6 @@
 
 @interface FirstViewController : MVVMBaseViewController
 
-/**
- *  是否前置请求（默认为NO）
- */
-@property (nonatomic, assign) BOOL preposeRequset;
-
 @property (nonatomic, weak) FirstViewControllerVM *firstViewControllerVM;
 
 @end

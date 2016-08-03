@@ -9,6 +9,7 @@
 #import "FirstViewControllerVM.h"
 #import "FirstViewController.h"
 #import "DoctorInfoCell.h"
+#import "SecondViewController.h"
 
 @interface FirstViewControllerVM ()
 
@@ -18,6 +19,7 @@
 
 @implementation FirstViewControllerVM
 
+#warning - 这方法优化，使用父类的 属性名，返回正确的数据类型
 - (FirstViewController *)firstViewController {
     return (FirstViewController *)_targetVC;
 }
@@ -65,6 +67,19 @@
         NSLog(@"%@",doctorInfoCellM);
         
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            
+            SecondViewController *vc = [[SecondViewController alloc] init];
+            vc.preposeRequset = [self firstViewController].preposeRequset;
+            if (vc.preposeRequset) {
+                //前置请求
+                [[vc.secondViewControllerVM.requestDoctors execute:doctorInfoCellM.doctor] subscribeNext:^(id x) {
+                    [self vmPushViewController:vc animated:YES];
+                }];
+            }else{
+                //后置请求
+                [self vmPushViewController:vc animated:YES];
+            }
+            
             [subscriber sendNext:doctorInfoCellM];
             [subscriber sendCompleted];
             return nil;

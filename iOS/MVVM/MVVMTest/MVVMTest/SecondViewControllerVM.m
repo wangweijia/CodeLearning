@@ -21,6 +21,7 @@
 
 @implementation SecondViewControllerVM
 
+#warning - 这方法优化，使用父类的 属性名，返回正确的数据类型
 - (SecondViewController *)secondViewController {
     return (SecondViewController *)_targetVC;
 }
@@ -28,6 +29,7 @@
 #pragma - mark bind active
 - (void)initialBind {
     [self bindRequest];
+    [self bindNewDoctorData];
 }
 
 #pragma - mark netWork
@@ -54,6 +56,10 @@
             return nil;
         }];
     }];
+}
+
+- (void)bindNewDoctorData {
+    _newDoctorData = RACObserve(self, doctor);
 }
 
 @end

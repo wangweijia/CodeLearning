@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MVVMBaseViewController.h"
+#import "SecondViewControllerVM.h"
 
 @interface SecondViewController : MVVMBaseViewController
+
+@property (nonatomic, weak) SecondViewControllerVM *secondViewControllerVM;
 
 @end

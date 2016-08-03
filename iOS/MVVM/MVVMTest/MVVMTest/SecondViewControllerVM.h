@@ -15,4 +15,9 @@
  */
 @property (nonatomic, strong, readonly) RACCommand *requestDoctors;
 
+/**
+ *  医生数据模型 更新的时候
+ */
+@property (nonatomic, strong, readonly) RACSignal *newDoctorData;
+
 @end
