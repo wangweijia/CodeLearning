@@ -12,6 +12,14 @@
 
 @interface FirstViewController ()
 
+/**
+ *  返回到头部 刷新数据
+ */
+@property (weak, nonatomic) IBOutlet UIButton *backTopAndRequest;
+
+/**
+ *  tableView
+ */
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
@@ -35,7 +43,11 @@
 
     _myTableView.dataSource = self.firstViewControllerVM;
     
-    [self requsetDoctor];
+    if (!_preposeRequset) {
+        [self requsetDoctor];
+    }
+    
+    [self bindBackTopAndRequest];
 }
 
 /**
@@ -47,9 +59,19 @@
     }];
 }
 
+/**
+ *  绑定 backTopAndRequest 事件
+ */
+- (void)bindBackTopAndRequest {
+    [[_backTopAndRequest rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        [self.myTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:YES];
+        [self requsetDoctor];
+    }];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 @end

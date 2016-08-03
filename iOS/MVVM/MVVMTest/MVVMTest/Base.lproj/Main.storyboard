@@ -18,12 +18,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNp-8h-bgM">
-                                <rect key="frame" x="235" y="154" width="131" height="30"/>
-                                <state key="normal" title="FirstViewController"/>
+                                <rect key="frame" x="200" y="154" width="201" height="30"/>
+                                <state key="normal" title="FirstViewController(后置请求)"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8O-Bd-R0b">
-                                <rect key="frame" x="277" y="204" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="200" y="204" width="201" height="30"/>
+                                <state key="normal" title="FirstViewController(前置请求)"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpF-gW-oLc">
                                 <rect key="frame" x="277" y="254" width="46" height="30"/>
@@ -43,6 +43,7 @@
                     <navigationItem key="navigationItem" id="oVA-RI-jFl"/>
                     <connections>
                         <outlet property="firstButton" destination="HNp-8h-bgM" id="hDQ-Je-3vb"/>
+                        <outlet property="firstButton2" destination="o8O-Bd-R0b" id="LHm-xQ-kbU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
