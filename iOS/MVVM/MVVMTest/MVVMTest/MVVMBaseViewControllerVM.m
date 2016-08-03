@@ -25,6 +25,10 @@
     return self;
 }
 
+- (void)vmPushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    [self.targetVC.navigationController pushViewController:viewController animated:animated];
+}
+
 - (void)setTargetVC:(UIViewController *)targetVC {
     _targetVC = targetVC;
 }
