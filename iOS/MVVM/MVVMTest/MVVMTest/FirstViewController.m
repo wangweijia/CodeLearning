@@ -26,15 +26,6 @@
 
 @implementation FirstViewController
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-#warning - 绑定baseVM 可以统一VM的命名规则，让后把绑定事件 放到 积累的初始化方法中
-        self.baseVM = [[FirstViewControllerVM alloc] initWithViewController:self];
-    }
-    return self;
-}
-
 #warning - 这方法优化，使用父类的 属性名，返回正确的数据类型
 - (FirstViewControllerVM *)firstViewControllerVM {
     return ((FirstViewControllerVM *)_baseVM);
@@ -70,11 +61,6 @@
         [self.myTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:YES];
         [self requsetDoctor];
     }];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
 }
 
 #pragma - mark UITableView Delegate

@@ -58,8 +58,11 @@
     }];
 }
 
+/**
+ *  监听 doctor 属性
+ */
 - (void)bindNewDoctorData {
-    _newDoctorData = RACObserve(self, doctor);
+    _doctorData = RACObserve(self, doctor);
 }
 
 @end

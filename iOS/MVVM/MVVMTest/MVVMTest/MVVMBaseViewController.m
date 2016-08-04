@@ -14,14 +14,29 @@
 
 @implementation MVVMBaseViewController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        if (!self.baseVM) {
+            NSString *className = NSStringFromClass(self.class);
+            NSString *vmName = [NSString stringWithFormat:@"%@%@",className,@"VM"];
+            Class vmClass = NSClassFromString(vmName);
+            if (vmClass) {
+                self.baseVM = [[vmClass alloc] initWithViewController:self];
+            }
+        }
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 - (MVVMBaseViewControllerVM *)baseVM {
