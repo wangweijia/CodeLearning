@@ -9,7 +9,7 @@
 #import "MVVMBaseViewControllerVM.h"
 #import "Doctor.h"
 
-@interface SecondViewControllerVM : MVVMBaseViewControllerVM
+@interface SecondViewControllerVM : MVVMBaseViewControllerVM <UITableViewDataSource>
 
 #pragma - mark 暴露在外属性
 /**
@@ -27,5 +27,10 @@
  *  医生数据模型 更新的时候
  */
 @property (nonatomic, strong, readonly) RACSignal *doctorData;
+
+/**
+ *  showBottomView 更新的时候
+ */
+@property (nonatomic, strong, readonly) RACSignal *bottomView;
 
 @end

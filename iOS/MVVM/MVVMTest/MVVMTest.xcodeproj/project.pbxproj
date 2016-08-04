@@ -10,6 +10,9 @@
 		180D1CC91D518AED00EEF51E /* DoctorInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D1CC71D518AED00EEF51E /* DoctorInfoCell.m */; };
 		180D1CCA1D518AED00EEF51E /* DoctorInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180D1CC81D518AED00EEF51E /* DoctorInfoCell.xib */; };
 		180D1CCD1D518D8F00EEF51E /* DoctorInfoCellM.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D1CCC1D518D8F00EEF51E /* DoctorInfoCellM.m */; };
+		1841F7271D53181F00A912EB /* DayScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1841F7251D53181F00A912EB /* DayScheduleCell.m */; };
+		1841F7281D53181F00A912EB /* DayScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1841F7261D53181F00A912EB /* DayScheduleCell.xib */; };
+		1841F72B1D5318B600A912EB /* DayScheduleCellM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1841F72A1D5318B600A912EB /* DayScheduleCellM.m */; };
 		1865F3B41D5032DB00BC56F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865F3B31D5032DB00BC56F5 /* main.m */; };
 		1865F3B71D5032DB00BC56F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865F3B61D5032DB00BC56F5 /* AppDelegate.m */; };
 		1865F3BA1D5032DB00BC56F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865F3B91D5032DB00BC56F5 /* ViewController.m */; };
@@ -24,6 +27,7 @@
 		1865F3FA1D503C1E00BC56F5 /* MVVMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865F3F91D503C1E00BC56F5 /* MVVMBaseViewController.m */; };
 		1865F3FD1D503C4000BC56F5 /* MVVMBaseViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865F3FC1D503C4000BC56F5 /* MVVMBaseViewControllerVM.m */; };
 		1865F4041D504E6100BC56F5 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865F4031D504E6100BC56F5 /* Doctor.m */; };
+		189EA9D01D5315AE00FFBEDF /* DaySchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EA9CF1D5315AE00FFBEDF /* DaySchedule.m */; };
 		18EFA0871D51EC2900044A68 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EFA0851D51EC2800044A68 /* SecondViewController.m */; };
 		18EFA0881D51EC2900044A68 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EFA0861D51EC2900044A68 /* SecondViewController.xib */; };
 		18EFA08B1D51EC7400044A68 /* SecondViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EFA08A1D51EC7400044A68 /* SecondViewControllerVM.m */; };
@@ -53,6 +57,11 @@
 		180D1CC81D518AED00EEF51E /* DoctorInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorInfoCell.xib; sourceTree = "<group>"; };
 		180D1CCB1D518D8F00EEF51E /* DoctorInfoCellM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorInfoCellM.h; sourceTree = "<group>"; };
 		180D1CCC1D518D8F00EEF51E /* DoctorInfoCellM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorInfoCellM.m; sourceTree = "<group>"; };
+		1841F7241D53181F00A912EB /* DayScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayScheduleCell.h; sourceTree = "<group>"; };
+		1841F7251D53181F00A912EB /* DayScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayScheduleCell.m; sourceTree = "<group>"; };
+		1841F7261D53181F00A912EB /* DayScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayScheduleCell.xib; sourceTree = "<group>"; };
+		1841F7291D5318B600A912EB /* DayScheduleCellM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayScheduleCellM.h; sourceTree = "<group>"; };
+		1841F72A1D5318B600A912EB /* DayScheduleCellM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayScheduleCellM.m; sourceTree = "<group>"; };
 		1865F3AF1D5032DB00BC56F5 /* MVVMTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1865F3B31D5032DB00BC56F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1865F3B51D5032DB00BC56F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +89,8 @@
 		1865F3FC1D503C4000BC56F5 /* MVVMBaseViewControllerVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVVMBaseViewControllerVM.m; sourceTree = "<group>"; };
 		1865F4021D504E6100BC56F5 /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
 		1865F4031D504E6100BC56F5 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
+		189EA9CE1D5315AE00FFBEDF /* DaySchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySchedule.h; sourceTree = "<group>"; };
+		189EA9CF1D5315AE00FFBEDF /* DaySchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySchedule.m; sourceTree = "<group>"; };
 		18EFA0841D51EC2800044A68 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		18EFA0851D51EC2800044A68 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		18EFA0861D51EC2900044A68 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
@@ -274,6 +285,10 @@
 		18EFA0811D51EBD200044A68 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				189EA9CE1D5315AE00FFBEDF /* DaySchedule.h */,
+				189EA9CF1D5315AE00FFBEDF /* DaySchedule.m */,
+				1841F7291D5318B600A912EB /* DayScheduleCellM.h */,
+				1841F72A1D5318B600A912EB /* DayScheduleCellM.m */,
 			);
 			name = M;
 			sourceTree = "<group>";
@@ -293,6 +308,9 @@
 				18EFA0841D51EC2800044A68 /* SecondViewController.h */,
 				18EFA0851D51EC2800044A68 /* SecondViewController.m */,
 				18EFA0861D51EC2900044A68 /* SecondViewController.xib */,
+				1841F7241D53181F00A912EB /* DayScheduleCell.h */,
+				1841F7251D53181F00A912EB /* DayScheduleCell.m */,
+				1841F7261D53181F00A912EB /* DayScheduleCell.xib */,
 			);
 			name = V/VC;
 			sourceTree = "<group>";
@@ -422,6 +440,7 @@
 			files = (
 				180D1CCA1D518AED00EEF51E /* DoctorInfoCell.xib in Resources */,
 				1865F3C21D5032DB00BC56F5 /* LaunchScreen.storyboard in Resources */,
+				1841F7281D53181F00A912EB /* DayScheduleCell.xib in Resources */,
 				18EFA0881D51EC2900044A68 /* SecondViewController.xib in Resources */,
 				1865F3BF1D5032DB00BC56F5 /* Assets.xcassets in Resources */,
 				1865F3BD1D5032DB00BC56F5 /* Main.storyboard in Resources */,
@@ -499,9 +518,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				180D1CCD1D518D8F00EEF51E /* DoctorInfoCellM.m in Sources */,
+				1841F7271D53181F00A912EB /* DayScheduleCell.m in Sources */,
+				189EA9D01D5315AE00FFBEDF /* DaySchedule.m in Sources */,
 				1865F3BA1D5032DB00BC56F5 /* ViewController.m in Sources */,
 				1865F3F31D503B7200BC56F5 /* FirstViewController.m in Sources */,
 				1865F3FD1D503C4000BC56F5 /* MVVMBaseViewControllerVM.m in Sources */,
+				1841F72B1D5318B600A912EB /* DayScheduleCellM.m in Sources */,
 				1865F3B71D5032DB00BC56F5 /* AppDelegate.m in Sources */,
 				1865F3F71D503BB900BC56F5 /* FirstViewControllerVM.m in Sources */,
 				1865F3B41D5032DB00BC56F5 /* main.m in Sources */,

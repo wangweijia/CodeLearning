@@ -36,11 +36,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.myTableView.dataSource = self.secondViewControllerVM;
+    UINib *cellNib = [UINib nibWithNibName:@"DayScheduleCell" bundle:nil];
+    [self.myTableView registerNib:cellNib forCellReuseIdentifier:@"DayScheduleCellaaaa"];
+    
     if (!self.preposeRequset) {
         [self requsetDoctor];
     }
     
     [self bindUpdateTopView];
+    [self bindUpdateBottomView];
 }
 
 /**
@@ -60,6 +65,20 @@
         self.nameLabel.text = x.name;
         self.cityLabel.text = x.cityStr;
         self.hospitalLabel.text = x.hospitalName;
+    }];
+}
+
+/**
+ *  更新下部viewUI
+ */
+- (void)bindUpdateBottomView {
+    [self.secondViewControllerVM.bottomView subscribeNext:^(id x) {
+        if ([x boolValue]) {
+            _bottomViewConstraintBottom.constant = 0;
+        }else{
+            _bottomViewConstraintBottom.constant = -24.0;
+        }
+        
     }];
 }
 

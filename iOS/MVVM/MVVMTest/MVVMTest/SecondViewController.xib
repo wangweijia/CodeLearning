@@ -11,7 +11,7 @@
                 <outlet property="cityLabel" destination="LM7-FJ-FfZ" id="BnU-yg-A90"/>
                 <outlet property="faceToFaceButton" destination="ok5-OW-bbe" id="O3C-QI-fEm"/>
                 <outlet property="hospitalLabel" destination="17G-iA-JsP" id="5Tc-Ch-4vF"/>
-                <outlet property="myTableView" destination="y7e-rX-Yic" id="6Vz-fD-l3s"/>
+                <outlet property="myTableView" destination="y7e-rX-Yic" id="9Cg-KP-fGB"/>
                 <outlet property="nameLabel" destination="Ugn-oD-jlq" id="xNm-Xb-lFP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -58,11 +58,11 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y7e-rX-Yic">
-                    <rect key="frame" x="0.0" y="214" width="320" height="306"/>
+                    <rect key="frame" x="0.0" y="214" width="320" height="354"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJc-jT-ccf" userLabel="BottomView">
-                    <rect key="frame" x="0.0" y="520" width="320" height="48"/>
+                    <rect key="frame" x="0.0" y="568" width="320" height="48"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ok5-OW-bbe">
                             <rect key="frame" x="130" y="9" width="60" height="30"/>
@@ -83,7 +83,7 @@
                 <constraint firstItem="EJc-jT-ccf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Bc4-Rf-kfm"/>
                 <constraint firstItem="FHM-0L-gKg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DCv-fG-PhI"/>
                 <constraint firstItem="y7e-rX-Yic" firstAttribute="top" secondItem="FHM-0L-gKg" secondAttribute="bottom" id="R0z-BM-Mdn"/>
-                <constraint firstAttribute="bottom" secondItem="EJc-jT-ccf" secondAttribute="bottom" id="RSD-Qh-myN"/>
+                <constraint firstAttribute="bottom" secondItem="EJc-jT-ccf" secondAttribute="bottom" constant="-48" id="RSD-Qh-myN"/>
                 <constraint firstItem="EJc-jT-ccf" firstAttribute="top" secondItem="y7e-rX-Yic" secondAttribute="bottom" id="ZbR-Qn-hSm"/>
                 <constraint firstItem="FHM-0L-gKg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="hcd-wD-K86"/>
                 <constraint firstAttribute="trailing" secondItem="y7e-rX-Yic" secondAttribute="trailing" id="oZu-p2-k0v"/>

@@ -8,8 +8,17 @@
 
 #import "SecondViewControllerVM.h"
 #import "SecondViewController.h"
+#import "DayScheduleCell.h"
+#import "DayScheduleCellM.h"
 
 @interface SecondViewControllerVM ()
+
+@property (nonatomic, strong) NSArray<DayScheduleCellM *> *dataSource;
+
+/**
+ *  是否显示底部view
+ */
+@property (nonatomic, assign) BOOL showBottomView;
 
 @end
 
@@ -24,6 +33,21 @@
 - (void)initialBind {
     [self bindRequest];
     [self bindNewDoctorData];
+    [self bindShowBottomView];
+}
+
+/**
+ *  监听 doctor 属性
+ */
+- (void)bindNewDoctorData {
+    _doctorData = RACObserve(self, doctor);
+}
+
+/**
+ *  监听 showBottomView 属性
+ */
+- (void)bindShowBottomView {
+    _bottomView = RACObserve(self, showBottomView);
 }
 
 #pragma - mark netWork
@@ -44,9 +68,15 @@
             NSURLRequest *requst = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
             [NSURLConnection sendAsynchronousRequest:requst queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                 NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                NSLog(@"%@",dic);
                 
                 Doctor *newDoctor = [[Doctor alloc] initWithDic:dic[@"info"]];
                 self.doctor = newDoctor;
+                
+                NSArray *daySchedules = [DaySchedule DaySchedules:dic[@"info"][@"latestFaceToFaceDayScheduleTables"]];
+                self.dataSource = [DayScheduleCellM DayScheduleCellMs:daySchedules];
+                
+                [self updateBottomViewShow:daySchedules];
                 
                 [subscriber sendNext:@"医生详细信息请求完成"];
                 [subscriber sendCompleted];
@@ -57,12 +87,33 @@
     }];
 }
 
-/**
- *  监听 doctor 属性
- */
-- (void)bindNewDoctorData {
-    _doctorData = RACObserve(self, doctor);
-    NSLog(@"aaaa");
+#pragma - makr UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _dataSource.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    DayScheduleCellM *dayScheduleCellM = _dataSource[indexPath.row];
+    
+    DayScheduleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DayScheduleCellaaaa" forIndexPath:indexPath];
+    
+    cell.dayScheduleCellM = dayScheduleCellM;
+    
+    return cell;
+}
+
+#pragma - mark other
+
+- (void)updateBottomViewShow:(NSArray<DaySchedule *> *)array {
+    BOOL temp = NO;
+    for (DaySchedule *daySchedule in array) {
+        if (daySchedule.scheduleCount > 0) {
+            temp = YES;
+            break;
+        }
+    }
+    self.showBottomView = temp;
 }
 
 @end
