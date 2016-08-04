@@ -18,6 +18,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *hospitalLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *selectedWeakLabel;
+
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
 @property (weak, nonatomic) IBOutlet UIButton *faceToFaceButton;
@@ -78,6 +80,22 @@
             _bottomViewConstraintBottom.constant = -24.0;
         }
         
+    }];
+}
+
+#pragma - mark DayScheduleCellDelegate
+- (void)weakCellDidSelected:(DayScheduleCell *)cell {
+    self.selectedWeakLabel.text = cell.dayScheduleCellM.daySchedule.weekStr;
+    
+    [[[self.baseVM.weakCellSelected execute:cell] map:^id(NSNumber *value) {
+        NSInteger i = [value integerValue];
+        if (i >= 0) {
+            return @(0);
+        }else{
+            return @(1);
+        }
+    }] subscribeNext:^(id x) {
+        _selectedWeakLabel.hidden = [x boolValue];
     }];
 }
 

@@ -25,6 +25,11 @@
 @property (nonatomic, strong, readonly) RACCommand *requestDoctors;
 
 /**
+ *  cell 选中
+ */
+@property (nonatomic, strong, readonly) RACCommand *weakCellSelected;
+
+/**
  *  医生数据模型 更新的时候
  */
 @property (nonatomic, strong, readonly) RACSignal *doctorData;

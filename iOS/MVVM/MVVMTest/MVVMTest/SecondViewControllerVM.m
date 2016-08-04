@@ -20,6 +20,11 @@
  */
 @property (nonatomic, assign) BOOL showBottomView;
 
+/**
+ *  选中的 weak index
+ */
+@property (nonatomic, assign) NSInteger selectedWeakIndex;
+
 @end
 
 @implementation SecondViewControllerVM
@@ -33,6 +38,7 @@
     [self bindRequest];
     [self bindNewDoctorData];
     [self bindShowBottomView];
+    [self bindWeakCellSelected];
 }
 
 /**
@@ -47,6 +53,27 @@
  */
 - (void)bindShowBottomView {
     _bottomView = RACObserve(self, showBottomView);
+}
+
+/**
+ *  cell点击回调
+ */
+- (void)bindWeakCellSelected {
+    _weakCellSelected = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(DayScheduleCell *input) {
+       return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+           NSInteger i = [_dataSource indexOfObject:input.dayScheduleCellM];
+           if (i == _selectedWeakIndex) {
+               _selectedWeakIndex = -1;
+           }else{
+               _selectedWeakIndex = i;
+           }
+           
+           [subscriber sendNext:@(_selectedWeakIndex)];
+           [subscriber sendCompleted];
+           
+           return nil;
+       }];
+    }];
 }
 
 #pragma - mark netWork
@@ -98,6 +125,7 @@
     DayScheduleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DayScheduleCellaaaa" forIndexPath:indexPath];
     
     cell.dayScheduleCellM = dayScheduleCellM;
+    cell.delegate = self.targetVC;
     
     return cell;
 }

@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sff-Bp-FoY">
@@ -35,13 +35,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFw-fV-uaO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                <connections>
+                                    <action selector="cellSelect:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8LG-TY-Iwf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gFw-fV-uaO" secondAttribute="trailing" id="2eC-ar-PeD"/>
+                            <constraint firstAttribute="bottom" secondItem="gFw-fV-uaO" secondAttribute="bottom" id="Bic-i3-Odr"/>
                             <constraint firstItem="NUD-pH-Fum" firstAttribute="centerY" secondItem="Sff-Bp-FoY" secondAttribute="centerY" id="CnX-Qg-L0t"/>
+                            <constraint firstItem="gFw-fV-uaO" firstAttribute="leading" secondItem="Sff-Bp-FoY" secondAttribute="leading" id="DJB-DS-q8m"/>
                             <constraint firstItem="ovb-jP-cJ3" firstAttribute="leading" secondItem="KX3-8y-XfZ" secondAttribute="trailing" id="OcF-g2-yEq"/>
                             <constraint firstItem="KX3-8y-XfZ" firstAttribute="leading" secondItem="NUD-pH-Fum" secondAttribute="trailing" constant="16" id="QjP-b5-vcs"/>
                             <constraint firstItem="NUD-pH-Fum" firstAttribute="leading" secondItem="Sff-Bp-FoY" secondAttribute="leading" constant="16" id="Tau-m3-fDS"/>
+                            <constraint firstItem="gFw-fV-uaO" firstAttribute="top" secondItem="Sff-Bp-FoY" secondAttribute="top" id="fXS-Lz-YBu"/>
                             <constraint firstItem="ovb-jP-cJ3" firstAttribute="centerY" secondItem="KX3-8y-XfZ" secondAttribute="centerY" id="rLJ-j1-XOn"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KX3-8y-XfZ" secondAttribute="trailing" constant="16" id="t7y-hM-iIW"/>
                             <constraint firstItem="KX3-8y-XfZ" firstAttribute="centerY" secondItem="NUD-pH-Fum" secondAttribute="centerY" id="zbh-Oy-vp3"/>

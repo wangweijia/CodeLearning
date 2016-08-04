@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "MVVMBaseViewController.h"
 #import "SecondViewControllerVM.h"
+#import "DayScheduleCell.h"
 @class Doctor;
 
-@interface SecondViewController : MVVMBaseViewController
+@interface SecondViewController : MVVMBaseViewController <DayScheduleCellDelegate>
 
 - (SecondViewControllerVM *)baseVM;
 

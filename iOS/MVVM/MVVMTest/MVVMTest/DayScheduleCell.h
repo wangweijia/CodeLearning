@@ -9,8 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "DayScheduleCellM.h"
 
+@protocol DayScheduleCellDelegate;
+
 @interface DayScheduleCell : UITableViewCell
 
+@property (nonatomic, weak) id<DayScheduleCellDelegate> delegate;
+
 @property (nonatomic, strong) DayScheduleCellM *dayScheduleCellM;
+
+@end
+
+@protocol DayScheduleCellDelegate <NSObject>
+
+- (void)weakCellDidSelected:(DayScheduleCell *)cell;
 
 @end

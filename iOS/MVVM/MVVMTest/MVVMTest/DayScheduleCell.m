@@ -36,4 +36,10 @@
     self.count.text = [@(dayScheduleCellM.daySchedule.scheduleCount) stringValue];
 }
 
+- (IBAction)cellSelect:(id)sender {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(weakCellDidSelected:)]) {
+        [self.delegate weakCellDidSelected:self];
+    }
+}
+
 @end
