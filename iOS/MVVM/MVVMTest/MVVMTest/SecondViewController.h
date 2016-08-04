@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MVVMBaseViewController.h"
 #import "SecondViewControllerVM.h"
+@class Doctor;
 
 @interface SecondViewController : MVVMBaseViewController
 

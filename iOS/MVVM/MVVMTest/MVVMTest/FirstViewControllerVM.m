@@ -77,6 +77,7 @@
                 }];
             }else{
                 //后置请求
+                vc.secondViewControllerVM.doctor = doctorInfoCellM.doctor;
                 [self vmPushViewController:vc animated:YES];
             }
             

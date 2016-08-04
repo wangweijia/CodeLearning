@@ -7,9 +7,17 @@
 //
 
 #import "MVVMBaseViewControllerVM.h"
+#import "Doctor.h"
 
 @interface SecondViewControllerVM : MVVMBaseViewControllerVM
 
+#pragma - mark 暴露在外属性
+/**
+ *  医生实体
+ */
+@property (nonatomic, strong) Doctor *doctor;
+
+#pragma - mark 暴露在流操作
 /**
  *  请求医生
  */

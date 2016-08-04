@@ -15,9 +15,10 @@
     if (self) {
         self.name = dic[@"name"];
         self.hospitalName = dic[@"hospitalName"];
-        self.doctorId = [dic[@"doctorId"] integerValue];
+        self.doctorId = [dic[@"id"] integerValue];
         self.cityStr = dic[@"cityStr"];
         self.info = dic[@"info"];
+        self.latestFaceToFaceDayScheduleTables = dic[@"latestFaceToFaceDayScheduleTables"];
     }
     return self;
 }

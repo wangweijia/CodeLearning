@@ -39,6 +39,8 @@
     if (!self.preposeRequset) {
         [self requsetDoctor];
     }
+    
+    [self bindUpdateTopView];
 }
 
 /**
@@ -53,7 +55,7 @@
 /**
  *  更新上部viewUI
  */
-- (void)updateTopView {
+- (void)bindUpdateTopView {
     [self.secondViewControllerVM.doctorData subscribeNext:^(Doctor *x) {
         self.nameLabel.text = x.name;
         self.cityLabel.text = x.cityStr;

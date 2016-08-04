@@ -22,6 +22,8 @@
 
 @property (nonatomic, copy) NSString *info;
 
+@property (nonatomic, strong) NSArray *latestFaceToFaceDayScheduleTables;
+
 - (instancetype)initWithDic:(NSDictionary *)dic;
 
 + (NSArray<Doctor *> *)initWithArray:(NSArray *)array;
