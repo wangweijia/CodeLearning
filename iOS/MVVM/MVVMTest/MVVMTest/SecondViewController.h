@@ -13,6 +13,6 @@
 
 @interface SecondViewController : MVVMBaseViewController
 
-@property (nonatomic, weak) SecondViewControllerVM *secondViewControllerVM;
+- (SecondViewControllerVM *)baseVM;
 
 @end

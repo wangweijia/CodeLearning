@@ -10,6 +10,7 @@
 #import "MVVMBaseViewControllerVM.h"
 #import "DoctorInfoCellM.h"
 #import "Doctor.h"
+@class FirstViewController;
 
 @interface FirstViewControllerVM : MVVMBaseViewControllerVM <UITableViewDataSource>
 
@@ -29,5 +30,7 @@
  *  cell 点击
  */
 @property (nonatomic, strong, readonly) RACCommand *cellSelected;
+
+- (FirstViewController *)targetVC;
 
 @end

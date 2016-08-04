@@ -36,7 +36,7 @@
 - (void)firstButton2Clicked:(UIButton *)btn {
     FirstViewController *firstViewController = [[FirstViewController alloc] init];
     firstViewController.preposeRequset = YES;
-    [[firstViewController.firstViewControllerVM.requestDoctors execute:nil] subscribeNext:^(id x) {
+    [[firstViewController.baseVM.requestDoctors execute:nil] subscribeNext:^(id x) {
         [self.navigationController pushViewController:firstViewController animated:YES];
     }];
 }

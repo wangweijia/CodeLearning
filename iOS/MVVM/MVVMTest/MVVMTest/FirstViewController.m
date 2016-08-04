@@ -26,15 +26,14 @@
 
 @implementation FirstViewController
 
-#warning - 这方法优化，使用父类的 属性名，返回正确的数据类型
-- (FirstViewControllerVM *)firstViewControllerVM {
+- (FirstViewControllerVM *)baseVM {
     return ((FirstViewControllerVM *)_baseVM);
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    _myTableView.dataSource = self.firstViewControllerVM;
+    _myTableView.dataSource = self.baseVM;
     _myTableView.delegate = self;
     
     if (!self.preposeRequset) {
@@ -48,7 +47,7 @@
  *  请求医生数据
  */
 - (void)requsetDoctor {
-    [[[self firstViewControllerVM].requestDoctors execute:nil] subscribeNext:^(id x) {
+    [[self.baseVM.requestDoctors execute:nil] subscribeNext:^(id x) {
         [self.myTableView reloadData];
     }];
 }
@@ -65,11 +64,11 @@
 
 #pragma - mark UITableView Delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return self.firstViewControllerVM.dataSourceCellsArray[indexPath.row].cellHeight;
+    return self.baseVM.dataSourceCellsArray[indexPath.row].cellHeight;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [[self.firstViewControllerVM.cellSelected execute:indexPath] subscribeNext:^(id x) {
+    [[self.baseVM.cellSelected execute:indexPath] subscribeNext:^(id x) {
         //可以对选中的cell 做一些ui上的处理
         
         NSLog(@"选中的cell对应的doctor是：%@", x);

@@ -15,11 +15,6 @@
 }
 
 /**
- *  weak target ViewController
- */
-//@property (nonatomic, weak) UIViewController *targetVC;
-
-/**
  *  初始化方法
  *
  *  @param vc 对应绑定的 ViewController

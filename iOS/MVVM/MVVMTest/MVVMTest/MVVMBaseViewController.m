@@ -39,12 +39,15 @@
 
 }
 
-- (MVVMBaseViewControllerVM *)baseVM {
-    return _baseVM;
-}
-
 - (void)setBaseVM:(MVVMBaseViewControllerVM *)baseVM {
     _baseVM = baseVM;
+    
+    [self baseVM];
+}
+
+- (MVVMBaseViewControllerVM *)baseVM {
+    NSAssert(NO, @"这个方法子类一定要重写，h文件中声明，m文件中实现");
+    return _baseVM;
 }
 
 @end

@@ -12,6 +12,6 @@
 
 @interface FirstViewController : MVVMBaseViewController
 
-@property (nonatomic, weak) FirstViewControllerVM *firstViewControllerVM;
+- (FirstViewControllerVM *)baseVM;
 
 @end

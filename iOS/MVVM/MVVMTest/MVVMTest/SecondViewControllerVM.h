@@ -8,6 +8,7 @@
 
 #import "MVVMBaseViewControllerVM.h"
 #import "Doctor.h"
+@class SecondViewController;
 
 @interface SecondViewControllerVM : MVVMBaseViewControllerVM <UITableViewDataSource>
 
@@ -32,5 +33,8 @@
  *  showBottomView 更新的时候
  */
 @property (nonatomic, strong, readonly) RACSignal *bottomView;
+
+
+- (SecondViewController *)targetVC;
 
 @end

@@ -19,12 +19,12 @@
 
 @implementation FirstViewControllerVM
 
-#warning - 这方法优化，使用父类的 属性名，返回正确的数据类型
-- (FirstViewController *)firstViewController {
+#pragma - mark 父类方法覆盖
+
+- (FirstViewController *)targetVC {
     return (FirstViewController *)_targetVC;
 }
 
-#pragma - mark bind active
 - (void)initialBind {
     [self bindRequest];
     [self bindCellClicked];
@@ -69,15 +69,15 @@
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             
             SecondViewController *vc = [[SecondViewController alloc] init];
-            vc.preposeRequset = [self firstViewController].preposeRequset;
+            vc.preposeRequset = self.targetVC.preposeRequset;
             if (vc.preposeRequset) {
                 //前置请求
-                [[vc.secondViewControllerVM.requestDoctors execute:doctorInfoCellM.doctor] subscribeNext:^(id x) {
+                [[vc.baseVM.requestDoctors execute:doctorInfoCellM.doctor] subscribeNext:^(id x) {
                     [self vmPushViewController:vc animated:YES];
                 }];
             }else{
                 //后置请求
-                vc.secondViewControllerVM.doctor = doctorInfoCellM.doctor;
+                vc.baseVM.doctor = doctorInfoCellM.doctor;
                 [self vmPushViewController:vc animated:YES];
             }
             
