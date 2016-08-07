@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 #import "FirstViewControllerVM.h"
 #import <RACEXTScope.h>
+#import "SecondViewController.h"
 
 @interface FirstViewController ()<UITableViewDelegate>
 
@@ -68,9 +69,21 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [[self.baseVM.cellSelected execute:indexPath] subscribeNext:^(id x) {
-        //可以对选中的cell 做一些ui上的处理
+    [[self.baseVM.cellSelected execute:indexPath] subscribeNext:^(Doctor *x) {
+        SecondViewController *vc = [[SecondViewController alloc] init];
+        vc.preposeRequset = self.preposeRequset;
         
+        //可以对选中的cell 做一些ui上的处理
+        if (self.preposeRequset) {
+            //前置请求
+            [[vc.baseVM.requestDoctors execute:x] subscribeNext:^(id x) {
+                [self.navigationController pushViewController:vc animated:YES];
+            }];
+        }else{
+            //后置请求
+            vc.baseVM.doctor = x;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
         NSLog(@"选中的cell对应的doctor是：%@", x);
     }];
 }

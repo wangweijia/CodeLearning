@@ -67,21 +67,8 @@
         NSLog(@"%@",doctorInfoCellM);
         
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-            
-            SecondViewController *vc = [[SecondViewController alloc] init];
-            vc.preposeRequset = self.targetVC.preposeRequset;
-            if (vc.preposeRequset) {
-                //前置请求
-                [[vc.baseVM.requestDoctors execute:doctorInfoCellM.doctor] subscribeNext:^(id x) {
-                    [self vmPushViewController:vc animated:YES];
-                }];
-            }else{
-                //后置请求
-                vc.baseVM.doctor = doctorInfoCellM.doctor;
-                [self vmPushViewController:vc animated:YES];
-            }
-            
-            [subscriber sendNext:doctorInfoCellM];
+            //页面推出 mvvm 将放在vc中处理
+            [subscriber sendNext:doctorInfoCellM.doctor];
             [subscriber sendCompleted];
             return nil;
         }];
