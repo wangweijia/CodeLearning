@@ -1,0 +1,6 @@
+framework module Pods_iso10CollectionView {
+  umbrella header "Pods-iso10CollectionView-umbrella.h"
+
+  export *
+  module * { export * }
+}
