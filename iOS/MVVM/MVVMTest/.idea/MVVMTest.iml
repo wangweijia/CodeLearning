@@ -7,18 +7,44 @@
       <sourceFolder url="file://$MODULE_DIR$/MVVMTest/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MVVMTest/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MVVMTest/Base.lproj/Main.storyboard" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/BaseMVVM.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/BaseMVVM.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/BaseMVVMViewController.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/BaseMVVMViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/DaySchedule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/DaySchedule.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/DayScheduleCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/DayScheduleCell.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/DayScheduleCell.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/DayScheduleCellM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/DayScheduleCellM.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/Doctor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/Doctor.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/DoctorInfoCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/DoctorInfoCell.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/DoctorInfoCell.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/DoctorInfoCellM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/DoctorInfoCellM.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/FirstViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/FirstViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/FirstViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/FirstViewControllerVM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/FirstViewControllerVM.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MVVMTest/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MVVMTest/main.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/MVVMBaseViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/MVVMBaseViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/MVVMBaseViewControllerVM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/MVVMBaseViewControllerVM.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/SecondViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/SecondViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/SecondViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/SecondViewControllerVM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MVVMTest/SecondViewControllerVM.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MVVMTest/ViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MVVMTest/ViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MVVMTestTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MVVMTestTests/MVVMTestTests.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MVVMTestUITests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MVVMTestUITests/MVVMTestUITests.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods.debug.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods.release.xcconfig" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -114,6 +140,7 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.3.0/include" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/DTPerformanceSession.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/InterfaceBuilderKit.framework/Headers" />
+          <root url="file://$MODULE_DIR$/Pods/Headers/Public" />
         </CLASSES>
         <SOURCES>
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers" />
@@ -205,6 +232,7 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.3.0/include" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/DTPerformanceSession.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/InterfaceBuilderKit.framework/Headers" />
+          <root url="file://$MODULE_DIR$/Pods/Headers/Public" />
         </SOURCES>
       </library>
     </orderEntry>

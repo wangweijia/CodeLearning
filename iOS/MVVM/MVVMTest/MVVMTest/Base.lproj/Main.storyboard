@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A270f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aGa-Gg-YC1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A286a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aGa-Gg-YC1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -26,16 +26,28 @@
                                 <state key="normal" title="FirstViewController(所有-请求前置)"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpF-gW-oLc">
-                                <rect key="frame" x="277" y="254" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="274" y="254" width="52" height="30"/>
+                                <state key="normal" title="Button1"/>
+                                <connections>
+                                    <action selector="button1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="prL-Gc-Nq0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcm-In-1Pi">
+                                <rect key="frame" x="272" y="304" width="55" height="30"/>
+                                <state key="normal" title="Button2"/>
+                                <connections>
+                                    <action selector="button2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UBF-Bv-Faa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Pcm-In-1Pi" firstAttribute="top" secondItem="RpF-gW-oLc" secondAttribute="bottom" constant="20" id="5m9-CL-SQK"/>
                             <constraint firstItem="RpF-gW-oLc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BTD-wF-lGc"/>
                             <constraint firstItem="HNp-8h-bgM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bbh-g5-rKT"/>
                             <constraint firstItem="o8O-Bd-R0b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sgp-Gg-8fy"/>
                             <constraint firstItem="o8O-Bd-R0b" firstAttribute="top" secondItem="HNp-8h-bgM" secondAttribute="bottom" constant="20" id="Ugm-5m-y5D"/>
+                            <constraint firstItem="Pcm-In-1Pi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UuL-jF-Qfg"/>
                             <constraint firstItem="RpF-gW-oLc" firstAttribute="top" secondItem="o8O-Bd-R0b" secondAttribute="bottom" constant="20" id="X5x-nh-dkC"/>
                             <constraint firstItem="HNp-8h-bgM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="90" id="k3n-MV-l1f"/>
                         </constraints>

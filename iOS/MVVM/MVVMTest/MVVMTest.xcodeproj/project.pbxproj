@@ -402,6 +402,7 @@
 				TargetAttributes = {
 					1865F3AE1D5032DB00BC56F5 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6KLN6TB8A7;
 					};
 					1865F3C71D5032DC00BC56F5 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -673,6 +674,7 @@
 			baseConfigurationReference = 7B78F50FE15AD070CA940822 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6KLN6TB8A7;
 				INFOPLIST_FILE = MVVMTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -686,6 +688,7 @@
 			baseConfigurationReference = 1D08D8595CE979EB8F5F9097 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6KLN6TB8A7;
 				INFOPLIST_FILE = MVVMTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
