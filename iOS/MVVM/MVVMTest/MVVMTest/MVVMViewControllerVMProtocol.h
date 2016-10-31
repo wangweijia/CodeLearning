@@ -17,11 +17,11 @@
 /**
  指向自己对应的 控制器
  */
-@property (nonatomic, weak) id<MVVMViewControllerProtocol> targetVC;
+@property (nonatomic, weak) id targetVC;
 
 /**
  用于绑定事件
  */
-- (void)initialBind；
+- (void)initialBind;
 
 @end

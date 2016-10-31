@@ -18,6 +18,6 @@
 /**
  指向自己对应的 控制器模型
  */
-@property (nonatomic, strong) id<MVVMViewControllerVMProtocol> baseVM;
+@property (nonatomic, strong) id baseVM;
 
 @end
