@@ -27,6 +27,8 @@
 		1865F3FA1D503C1E00BC56F5 /* MVVMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865F3F91D503C1E00BC56F5 /* MVVMBaseViewController.m */; };
 		1865F3FD1D503C4000BC56F5 /* MVVMBaseViewControllerVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865F3FC1D503C4000BC56F5 /* MVVMBaseViewControllerVM.m */; };
 		1865F4041D504E6100BC56F5 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865F4031D504E6100BC56F5 /* Doctor.m */; };
+		18699C631DC71FC100173401 /* UIViewController+MVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699C621DC71FC100173401 /* UIViewController+MVVMViewController.m */; };
+		18699C661DC71FE100173401 /* NSObject+MVVMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18699C651DC71FE100173401 /* NSObject+MVVMViewModel.m */; };
 		189EA9D01D5315AE00FFBEDF /* DaySchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EA9CF1D5315AE00FFBEDF /* DaySchedule.m */; };
 		18EFA0871D51EC2900044A68 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EFA0851D51EC2800044A68 /* SecondViewController.m */; };
 		18EFA0881D51EC2900044A68 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EFA0861D51EC2900044A68 /* SecondViewController.xib */; };
@@ -91,6 +93,10 @@
 		1865F4031D504E6100BC56F5 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
 		18699C5B1DC6F56E00173401 /* MVVMViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMViewControllerProtocol.h; sourceTree = "<group>"; };
 		18699C5C1DC6F60F00173401 /* MVVMViewControllerVMProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMViewControllerVMProtocol.h; sourceTree = "<group>"; };
+		18699C611DC71FC100173401 /* UIViewController+MVVMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MVVMViewController.h"; sourceTree = "<group>"; };
+		18699C621DC71FC100173401 /* UIViewController+MVVMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MVVMViewController.m"; sourceTree = "<group>"; };
+		18699C641DC71FE100173401 /* NSObject+MVVMViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MVVMViewModel.h"; sourceTree = "<group>"; };
+		18699C651DC71FE100173401 /* NSObject+MVVMViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MVVMViewModel.m"; sourceTree = "<group>"; };
 		189EA9CE1D5315AE00FFBEDF /* DaySchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySchedule.h; sourceTree = "<group>"; };
 		189EA9CF1D5315AE00FFBEDF /* DaySchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySchedule.m; sourceTree = "<group>"; };
 		18EFA0841D51EC2800044A68 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -202,11 +208,13 @@
 		1865F3E61D50341000BC56F5 /* project */ = {
 			isa = PBXGroup;
 			children = (
+				18699C5D1DC71E8800173401 /* Category */,
 				18699C5A1DC6F51500173401 /* Protocol */,
 				1865F3E81D50345700BC56F5 /* BaseMVVM */,
 				1865F3E71D50344600BC56F5 /* MainViewController */,
 				1865F3EF1D503B2D00BC56F5 /* FirstViewController */,
 				18EFA0801D51EB8E00044A68 /* SecondViewController */,
+				18699C671DC7439500173401 /* ThirdViewController */,
 			);
 			name = project;
 			sourceTree = "<group>";
@@ -282,6 +290,24 @@
 				18699C5C1DC6F60F00173401 /* MVVMViewControllerVMProtocol.h */,
 			);
 			name = Protocol;
+			sourceTree = "<group>";
+		};
+		18699C5D1DC71E8800173401 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				18699C611DC71FC100173401 /* UIViewController+MVVMViewController.h */,
+				18699C621DC71FC100173401 /* UIViewController+MVVMViewController.m */,
+				18699C641DC71FE100173401 /* NSObject+MVVMViewModel.h */,
+				18699C651DC71FE100173401 /* NSObject+MVVMViewModel.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		18699C671DC7439500173401 /* ThirdViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ThirdViewController;
 			sourceTree = "<group>";
 		};
 		18EFA0801D51EB8E00044A68 /* SecondViewController */ = {
@@ -542,7 +568,9 @@
 				1865F3B41D5032DB00BC56F5 /* main.m in Sources */,
 				1865F4041D504E6100BC56F5 /* Doctor.m in Sources */,
 				18EFA0871D51EC2900044A68 /* SecondViewController.m in Sources */,
+				18699C661DC71FE100173401 /* NSObject+MVVMViewModel.m in Sources */,
 				18EFA08B1D51EC7400044A68 /* SecondViewControllerVM.m in Sources */,
+				18699C631DC71FC100173401 /* UIViewController+MVVMViewController.m in Sources */,
 				180D1CC91D518AED00EEF51E /* DoctorInfoCell.m in Sources */,
 				1865F3FA1D503C1E00BC56F5 /* MVVMBaseViewController.m in Sources */,
 			);

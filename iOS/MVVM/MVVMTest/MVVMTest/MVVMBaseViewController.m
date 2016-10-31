@@ -46,7 +46,7 @@
 }
 
 - (MVVMBaseViewControllerVM *)baseVM {
-    NSAssert(NO, @"这个方法子类一定要重写，h文件中声明，m文件中实现");
+    NSAssert(NO, @"这个方法子类一定要在m文件中重写");
     return _baseVM;
 }
 

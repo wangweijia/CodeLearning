@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "MVVMBaseViewControllerVM.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "MVVMViewControllerProtocol.h"
 
-@interface MVVMBaseViewController : UIViewController {
+@interface MVVMBaseViewController<MVVMBaseViewControllerProtocol> : UIViewController {
     MVVMBaseViewControllerVM *_baseVM;
 }
 
