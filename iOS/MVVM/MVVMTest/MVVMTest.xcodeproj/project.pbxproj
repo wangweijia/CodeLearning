@@ -89,6 +89,8 @@
 		1865F3FC1D503C4000BC56F5 /* MVVMBaseViewControllerVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVVMBaseViewControllerVM.m; sourceTree = "<group>"; };
 		1865F4021D504E6100BC56F5 /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
 		1865F4031D504E6100BC56F5 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
+		18699C5B1DC6F56E00173401 /* MVVMViewControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMViewControllerProtocol.h; sourceTree = "<group>"; };
+		18699C5C1DC6F60F00173401 /* MVVMViewControllerVMProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVVMViewControllerVMProtocol.h; sourceTree = "<group>"; };
 		189EA9CE1D5315AE00FFBEDF /* DaySchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySchedule.h; sourceTree = "<group>"; };
 		189EA9CF1D5315AE00FFBEDF /* DaySchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySchedule.m; sourceTree = "<group>"; };
 		18EFA0841D51EC2800044A68 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		1865F3E61D50341000BC56F5 /* project */ = {
 			isa = PBXGroup;
 			children = (
+				18699C5A1DC6F51500173401 /* Protocol */,
 				1865F3E81D50345700BC56F5 /* BaseMVVM */,
 				1865F3E71D50344600BC56F5 /* MainViewController */,
 				1865F3EF1D503B2D00BC56F5 /* FirstViewController */,
@@ -270,6 +273,15 @@
 				180D1CCC1D518D8F00EEF51E /* DoctorInfoCellM.m */,
 			);
 			name = M;
+			sourceTree = "<group>";
+		};
+		18699C5A1DC6F51500173401 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				18699C5B1DC6F56E00173401 /* MVVMViewControllerProtocol.h */,
+				18699C5C1DC6F60F00173401 /* MVVMViewControllerVMProtocol.h */,
+			);
+			name = Protocol;
 			sourceTree = "<group>";
 		};
 		18EFA0801D51EB8E00044A68 /* SecondViewController */ = {
